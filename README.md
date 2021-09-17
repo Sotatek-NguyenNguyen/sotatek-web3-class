@@ -1,7 +1,8 @@
-# Tiep.Le
+# ba.nguyen
 
 ## Exercise 1
-https://github.com/Sotatek-TiepLe/blockchain-class-ex1/blob/master/ex1.js
+https://github.com/Sotatek-BaNguyen/web3-ex1
 
 ## Exercise 2
-https://Sotatek-TiepLe.github.io/blockchain-class-ex2
+Deploy: https://web3-basic-app.herokuapp.com/
+
