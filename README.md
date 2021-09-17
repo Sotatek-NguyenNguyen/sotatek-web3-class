@@ -1,7 +1,11 @@
-# Tiep.Le
+# Khanh.Le
 
 ## Exercise 1
-https://github.com/Sotatek-TiepLe/blockchain-class-ex1/blob/master/ex1.js
+
+repo: https://github.com/Sotatek-KhanhLe/web3-learning-phase2-ex1
 
 ## Exercise 2
-https://Sotatek-TiepLe.github.io/blockchain-class-ex2
+
+repo: https://github.com/Sotatek-KhanhLe/web3-learning-phase2-ex2
+
+deployment: https://naughty-fermi-42a05e.netlify.app/
