@@ -1,7 +1,29 @@
-# Tiep.Le
+## Getting Started
 
-## Exercise 1
-https://github.com/Sotatek-TiepLe/blockchain-class-ex1/blob/master/ex1.js
+First, install packages requirement:
 
-## Exercise 2
-https://Sotatek-TiepLe.github.io/blockchain-class-ex2
+```bash
+npm install
+# or
+yarn install
+```
+
+
+Then, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+
+## Technical
+
+NextJS: https://nextjs.org/
+
+Web3js: https://web3js.readthedocs.io/
+
+Material-ui: https://material-ui.com/
