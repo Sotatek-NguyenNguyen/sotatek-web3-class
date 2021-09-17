@@ -1,0 +1,17 @@
+.input {
+  border-radius: 3px;
+  border: 1px solid #383c43;
+  background: #141414;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.input-fullwidth {
+  width: 100%;
+}
+
+.input:focus {
+  outline: none;
+}

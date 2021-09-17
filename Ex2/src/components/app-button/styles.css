@@ -1,0 +1,32 @@
+.button {
+  font-size: 14px;
+  width: fit-content;
+  padding: 8px 16px;
+  border-radius: 24px;
+  border: none;
+  font-weight: 700;
+  color: #151515;
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.button-disconnect {
+  background: #e74c3c;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.button:disabled {
+  cursor: progress;
+}
+
+.button:disabled:hover {
+  opacity: 1;
+}
