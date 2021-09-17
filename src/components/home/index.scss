@@ -1,0 +1,52 @@
+@import "../../styles/variables";
+
+.home-page {
+  .content {
+    padding-top: 80px;
+    height: calc(100vh - 80px);
+    position: relative;
+    .wrap-content {
+      text-align: center;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      img {
+        width: 130px;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 50px;
+      }
+      button {
+        margin-right: 10px;
+      }
+      .account-info {
+        text-align: left;
+        margin-bottom: 30px;
+        p {
+          margin-bottom: 5px;
+          .label {
+            display: inline-block;
+            width: 200px;
+          }
+        }
+      }
+    }
+  }
+
+  .action {
+    margin-top: 20px;
+    input {
+      padding: 0 10px;
+      width: 80px;
+      height: 30px;
+    }
+  }
+
+  .query-data {
+    width: 700px;
+    margin-top: 30px;
+    max-height: 210px;
+    overflow: auto;
+  }
+}

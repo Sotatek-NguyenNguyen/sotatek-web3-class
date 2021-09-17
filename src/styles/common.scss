@@ -1,0 +1,95 @@
+// typography
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-italic {
+  font-family: "IBMPlexMono-Italic";
+}
+
+.text-small {
+  font-size: 0.8rem;
+}
+
+//text-color
+.text-white {
+  color: $white;
+}
+
+.text-white {
+  color: $white;
+}
+
+.text-orange {
+  color: $orange;
+}
+
+.text-yellow {
+  color: $yellow-light;
+}
+
+.text-green {
+  color: $green;
+}
+
+// background
+.bg-green {
+  background: $green;
+}
+
+.bg-yellow {
+  background: $yellow-light;
+}
+
+.bg-orange {
+  background: $orange;
+}
+
+.bg-dark {
+  background: $dark;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  @media screen and (max-width: 1250px) {
+    max-width: 960px;
+  }
+  @media screen and (max-width: 1024px) {
+    padding: 0;
+  }
+  @media screen and (max-width: 991px) {
+    width: 768px;
+  }
+  @media screen and (max-width: 640px) {
+    width: 100%;
+  }
+}
+
+.truncate {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.err-message {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.info-message {
+  margin-bottom: 10px;
+  font-size: 15px;
+  margin-top: 15px;
+  color: $yellow-light
+}

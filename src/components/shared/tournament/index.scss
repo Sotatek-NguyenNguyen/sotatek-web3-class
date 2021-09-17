@@ -1,0 +1,188 @@
+@import "../../../styles/variables";
+
+.one-tourament-mobile {
+  @media screen and (min-width: 640px) {
+    display: none;
+  }
+  padding: 30px 0;
+  .top {
+    margin: 30px 0;
+  }
+
+  .circle {
+    width: 85px !important;
+    height: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    margin: 0 auto;
+    border: 3px solid $yellow-light;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .one-mint {
+    .mint-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 30px;
+
+      .block {
+        width: calc(100% / 3);
+        &.price {
+          font-size: 18px;
+        }
+      }
+      p {
+        font-size: 11px;
+      }
+    }
+  }
+
+  .one-comunity {
+    width: 330px;
+    height: 330px;
+    margin: 0 auto;
+    margin-top: -6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 3px solid #c2bd88;
+    border-radius: 50%;
+    overflow: hidden;
+    img {
+      max-width: 250px;
+    }
+    @media screen and (max-width: 320px) {
+      width: 260px;
+      height: 260px;
+    }
+  }
+  .one-champion {
+    .line-center {
+      height: 74px;
+      margin: 0 auto;
+    }
+
+    .champion-top {
+      margin-left: 40px;
+      border-top: 3px solid $yellow-light;
+      border-right: 3px solid $yellow-light;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 70px;
+
+      .line-arrow {
+        height: 47px;
+        background: $yellow-light;
+        position: relative;
+      }
+
+      .champion-item {
+        .circle {
+          position: absolute;
+          display: inline-flex;
+          vertical-align: middle;
+          left: -45px;
+          img {
+            max-width: 60%;
+          }
+        }
+        .text {
+          display: inline-block;
+          width: 84%;
+          padding-left: 15px;
+          font-size: 14px;
+          p {
+            display: inline-block;
+            width: 80%;
+            &.text-orange {
+              margin-bottom: 10px;
+            }
+            &.text-yellow {
+              font-size: 12px;
+              width: 84%;
+            }
+          }
+          @media screen and (max-width: 320px) {
+            padding-left: 30px;
+            p {
+              font-size: 13px;
+              &.text-yellow {
+                font-size: 11px;
+              }
+            }
+          }
+        }
+      }
+
+      .line-bottom {
+        height: 80px;
+        margin-top: -3px;
+        @media screen and (max-width: 320px) {
+          margin-top: -12px;
+        }
+      }
+    }
+  }
+
+  .line {
+    width: 3px;
+    background: $yellow-light;
+  }
+
+  .line-right {
+    height: 80px;
+    margin-top: 0px;
+    float: right;
+    clear: both;
+  }
+
+  .line-bottom-50 {
+    width: 50%;
+    height: 3px;
+    float: right;
+  }
+
+  .line-last-arrow {
+    height: 55px;
+    margin-left: 50%;
+    position: relative;
+  }
+
+  .line-arrow,
+  .line-last-arrow {
+    &::after {
+      content: "";
+      position: absolute;
+      left: -6px;
+      bottom: -3px;
+      width: 30px;
+      height: 14px;
+      background: url("/images/down-arrow.png") no-repeat;
+      z-index: 100;
+    }
+  }
+}
+
+.nft-airdrop {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  p {
+    width: 35%;
+    display: inline-block;
+    &.best-ranking {
+      font-size: 11px;
+    }
+  }
+  @media screen and (max-width: 320px) {
+    p {
+      width: 30%;
+    }
+  }
+}
