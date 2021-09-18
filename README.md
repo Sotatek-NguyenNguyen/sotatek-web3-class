@@ -1,4 +1,4 @@
-# Tiep.Le
+#Duong.do
 
 ## Exercise 1
 https://github.com/sotatek-duongdo/homework/blob/main/ex1/test/index.js
