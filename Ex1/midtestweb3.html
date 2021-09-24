@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>FINAL TEST - STAKING POOL</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <script src='web3.min.js'></script>
+    <script src='abi.js'></script>
+
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+<h1>0xc778417e063141139fce010982780140aa0cd5ab</h1>
+
+<p>ETH: <span id="eth-balance">0</span> </p>
+<p>WETH9: <span id="WETH9-balance">0</span> </p>
+<p>Count Event transfer in 100 block latest : <span id="latest-block">0</span> </p>
+<p>Listen Event transfer: <ul id="Listen-transfer"></ul> </p>
+
+    <script type="text/javascript">
+
+
+async function loadWeb3() {
+    if (window.ethereum) {
+        window.web3 = new Web3(window.ethereum);
+        window.ethereum.enable();
+    }
+}
+
+async function load() {
+    await loadWeb3();
+    window.contract = await loadContract();
+
+    getEth();
+    getWeth9();
+    getEventIn100Block();
+    listenEvent();
+
+    const account = await getCurrentAccount();
+    console.log(account);
+    const totalSupply = await window.contract.methods.totalSupply().call({ from: account });
+    console.log(totalSupply);
+}
+
+load();
+
+function listenEvent() {
+    let options = {};
+    let strEvent = '';
+    window.contract.events.Transfer(options)
+        .on('data', event => {
+            console.log(event);
+            strEvent = strEvent + "<li> " + event.blockHash + " </li>";
+            const ethEL = document.getElementById('Listen-transfer');
+            ethEL.innerHTML = strEvent;
+
+        })
+        .on('changed', changed => console.log(changed))
+        .on('error', err => console.log ('error', err.message, err.stack))
+        .on('connected', str => console.log(str))
+}
+async function getCurrentAccount() {
+    const accounts = await window.web3.eth.getAccounts();
+    return accounts[0];
+}
+
+async function getEth() {
+    const account = await getCurrentAccount();
+    window.web3.eth.getBalance(account, function(err, result) {
+      if (err) {
+        console.log(err)
+      } else {
+        console.log(web3.utils.fromWei(result, "ether") + " ETH")
+        const ethEL = document.getElementById('eth-balance');
+        ethEL.innerHTML = web3.utils.fromWei(result, "ether") + " ETH";
+
+      }
+    })
+}
+
+async function getWeth9() {
+    const account = await getCurrentAccount();
+    const weth9 = await window.contract.methods.balanceOf(account).call({ from: account });
+    const ethEL = document.getElementById('WETH9-balance');
+    ethEL.innerHTML = web3.utils.fromWei(weth9, "ether") + " WETH9";
+}
+async function getEventIn100Block() {
+    const block = await web3.eth.getBlockNumber();
+
+    window.contract.getPastEvents('Transfer', {
+        //filter: {myIndexedParam: [20,23], myOtherIndexedParam: '0x123456789...'}, // Using an array means OR: e.g. 20 or 23
+        filter: {address: '0xc778417E063141139Fce010982780140Aa0cD5Ab'}, // Using an array means OR: e.g. 20 or 23
+        fromBlock: block - 100,
+        toBlock: 'latest'
+        }, function(error, events){
+            //console.log(events);
+         })
+        .then(function(events){
+            const ethEL = document.getElementById('latest-block');
+            ethEL.innerHTML = events.length;
+        });
+}
+
+
+
+async function loadContract() {
+
+    return await new window.web3.eth.Contract(
+        abi,
+        '0xc778417e063141139fce010982780140aa0cd5ab'); // rinkerby
+}
+
+    </script>
+</body>
+
+</html>
