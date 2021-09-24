@@ -1,7 +1,7 @@
 # Tiep.Le
 
 ## Exercise 1
-https://github.com/Sotatek-TiepLe/blockchain-class-ex1/blob/master/ex1.js
+https://github.com/Sotatek-NguyenNguyen/sotatek-web3-class/tree/nguyen.nguyennguyen.nguyen/Ex1
 
 ## Exercise 2
-https://Sotatek-TiepLe.github.io/blockchain-class-ex2
+https://github.com/Sotatek-NguyenNguyen/sotatek-web3-class/tree/nguyen.nguyennguyen.nguyen/Ex2
