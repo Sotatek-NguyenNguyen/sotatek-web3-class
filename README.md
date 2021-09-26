@@ -6,9 +6,9 @@
 
 ## Exercise 2 - Mid
       https://github.com/Sotatek-NguyenNguyen/nextjs/blob/main/pages/index.js
-      ### Link deploy Test: https://nextjs-o11h1dhn6-sotanextjs.vercel.app/
+### Link deploy Test: https://nextjs-o11h1dhn6-sotanextjs.vercel.app/
 
 
 ## Exercise 3 - Final
       https://github.com/Sotatek-NguyenNguyen/nextjs/blob/main/pages/final/index.js
-      ### Link deploy Test: https://nextjs-o11h1dhn6-sotanextjs.vercel.app/final
+### Link deploy Test: https://nextjs-o11h1dhn6-sotanextjs.vercel.app/final
